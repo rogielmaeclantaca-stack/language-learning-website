@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover France</title>
+    <link rel="stylesheet" href="france.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Bienvenue en France</span>
+        <h1>French<br>Heritage</h1>
+        <p>Discover France’s history, art, and culinary delights from Paris to Provence.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>Land of<br>Art & Gastronomy</h2>
+                <p>France is a country of elegance, history, and culinary mastery. From the streets of Paris to the vineyards of Bordeaux, every region offers unique culture, art, and flavor.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">2k+</span>
+                        <span class="label">Years of History</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">67M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://www.tastefrance.com/sites/default/files/styles/article_main_image/public/2021-04/Bordeaux_Gary_Yeowell.jpg.webp?itok=eFMnxamn" alt="France City">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">French Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.allrecipes.com/thmb/cxtGONKpj_8Jw3rcKBL2vfy7Ouc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4674617-254ac8be197f4192800fd6f2eecacc4b.jpg" alt="Croissant">
+                    <div class="card-badge">Breakfast</div>
+                </div>
+                <div class="card-body">
+                    <h3>Croissant</h3>
+                    <p>Buttery, flaky pastry that’s a classic French breakfast staple.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Flour</li>
+                            <li>Butter</li>
+                            <li>Yeast</li>
+                        </ul>
+                        <p><strong>Method:</strong> Layer butter in dough, fold repeatedly, bake until golden.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://static01.nyt.com/images/2023/08/24/multimedia/MC-Coq-Au-Van-ctpm/MC-Coq-Au-Van-ctpm-videoSixteenByNineJumbo1600.jpg" alt="Coq au Vin">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Coq au Vin</h3>
+                    <p>Classic chicken dish slow-cooked in wine with mushrooms and onions.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Red Wine</li>
+                            <li>Mushrooms & onions</li>
+                        </ul>
+                        <p><strong>Method:</strong> Marinate chicken in wine, cook with vegetables until tender.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-07-ratatouille%2FRatatouille-" alt="Ratatouille">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Ratatouille</h3>
+                    <p>Vegetable stew with zucchini, eggplant, peppers, and tomatoes.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Zucchini</li>
+                            <li>Eggplant</li>
+                            <li>Bell Peppers & Tomatoes</li>
+                        </ul>
+                        <p><strong>Method:</strong> Sauté vegetables in olive oil, season, simmer until tender.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Eiffel Tower</h3>
+                <p>The iconic Paris landmark symbolizing France’s culture and architectural beauty.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://images.ctfassets.net/szez98lehkfm/2lDEPSznsRTIKmsAR1uspa/a8e2daf4d8f4aaf67ba83fa8a4f7ed58/MyIC_Inline_22775" alt="Eiffel Tower">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Mont Saint-Michel</h3>
+                <p>Medieval abbey on a rocky island with breathtaking views of Normandy’s coastline.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://www.visit-lorient-brittany.com/uploads/sites/5/2019/06/eclairage-sur-le-mont-de-nuit.jpg" alt="Mont Saint-Michel">
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>French Phrases</h2>
+            <p>Learn basic French phrases. Click the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Bonjour</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="fr_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="fr_hello.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Merci</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="fr_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="fr_thanks.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>Non</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="fr_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="fr_no.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Oui</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="fr_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="fr_yes.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>S'il vous plaît</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="fr_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="fr_please.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover France © 2026</p>
+</footer>
+
+<script src="france.js"></script>
+</body>
+</html>

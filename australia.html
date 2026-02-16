@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Australia</title>
+    <link rel="stylesheet" href="australia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+...
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Welcome to Down Under</span>
+        <h1>Australian<br>Heritage</h1>
+        <p>A journey through the culture, flavors, and lingo of the Southern Land.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>The Great<br>Southern Land</h2>
+                <p>Australia is a land of staggering contrast and spectacular beauty. Along the coast, you can explore vibrant multicultural cities, vast sand islands, ancient rainforests, and the Great Barrier Reef. In the Red Centre, rugged national parks and red-earth deserts offer the ultimate outback adventure.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">65k+</span>
+                        <span class="label">Years of History</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">26M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?q=80&w=2039&auto=format&fit=crop" alt="Outback Road">
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">Aussie Eats</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.allrecipes.com/thmb/GHtePWd0QdEGpXY6PQS-VpUDVBU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-15532-the-best-pavlova-VAT-2X1-01-169f082598a545b79fbda7d275d749d4.jpg" alt="Pavlova">
+                    <div class="card-badge">Dessert</div>
+                </div>
+                <div class="card-body">
+                    <h3>Pavlova</h3>
+                    <p>Meringue-based dessert with a crisp crust and soft, light inside.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>4 egg whites</li>
+                            <li>1 cup sugar</li>
+                            <li>1 tsp vinegar & cornflour</li>
+                        </ul>
+                        <p><strong>Method:</strong> Beat whites, add sugar. Fold in vinegar/cornflour. Bake 1hr @ 150°C.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://images.sbs.com.au/dims4/default/be69da6/2147483647/strip/true/crop/1300x731+0+137/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Ffood%2Fpublic%2Fmmie_1019_steakstoutpie_h.jpg" alt="Meat Pie">
+                    <div class="card-badge">Savory</div>
+                </div>
+                <div class="card-body">
+                    <h3>Meat Pie</h3>
+                    <p>Hand-sized pie containing diced meat and gravy. The classic snack.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>500g minced beef</li>
+                            <li>Onion & Gravy</li>
+                            <li>Shortcrust pastry</li>
+                        </ul>
+                        <p><strong>Method:</strong> Cook filling. Encapsulate in pastry. Bake 25m @ 200°C.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://www.remitly.com/blog/wp-content/uploads/2023/09/australia-vegemite-on-toast-1024x667.jpg" alt="Vegemite">
+                    <div class="card-badge">Breakfast</div>
+                </div>
+                <div class="card-body">
+                    <h3>Vegemite Toast</h3>
+                    <p>Thick, dark Australian food spread made from leftover brewers' yeast.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Toast</li>
+                            <li>Lots of Butter</li>
+                            <li>Tiny bit of Vegemite</li>
+                        </ul>
+                        <p><strong>Method:</strong> Toast bread. Butter generously. Scrape a WHISPER of Vegemite over it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Sydney Opera House</h3>
+                <p>A masterpiece of 20th-century architecture. Its unique use of a series of gleaming white sail-shaped shells makes it one of the most recognizable buildings in the world.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sydney_Opera_House_-_Dec_2008.jpg" alt="Opera House">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Great Barrier Reef</h3>
+                <p>The world's largest coral reef system composed of over 2,900 individual reefs. It is one of the seven natural wonders of the world and visible from space.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Great_Barrier_Reef_2018.jpg" alt="Reef">
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>Aussie Slang</h2>
+            <p>Australian English is known for its unique slang and expressions that reflect the laid-back and friendly culture. Click the cards below to translate the local lingo!</p>
+            <img src="https://cf.ppt-online.org/files/slide/p/pQzV15iY7vhDUymdqojWger4HTwbu8S2PFfCGa/slide-7.jpg" alt="Aussie Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>G'day</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="aus_G,day_language.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="hello_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Ta</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="english_language_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="thankyou_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>Yeah, Nah</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="english_language_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="no_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Yes</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="english_language_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="yes_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Please</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="english_language_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="please_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Jill ano lalagay ko dto AHAHA name lng toh ng group nyo ano ba ?</p>
+</footer>
+
+<script src="australia.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Italy</title>
+    <link rel="stylesheet" href="italy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Benvenuti in Italia</span>
+        <h1>Italian<br>Heritage</h1>
+        <p>Travel through Italy’s culture, food, and historic landmarks from Rome to Venice.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>Land of<br>Art & History</h2>
+                <p>Italy is a treasure trove of art, history, and natural beauty. Explore ancient Rome, Renaissance Florence, coastal Amalfi, and the romantic canals of Venice.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">3k+</span>
+                        <span class="label">Years of History</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">60M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&h=333&ixlib=python-3.2.1&q=70&w=500&s=17591fcdc23a9427f0c649273de806e0" alt="Rome Colosseum">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">Italian Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.foodandwine.com/thmb/7BpSJWDh1s-2M2ooRPHoy07apq4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mozzarella-pizza-margherita-FT-RECIPE0621-11fa41ceb1a5465d9036a23da87dd3d4.jpg" alt="Pizza Margherita">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Pizza Margherita</h3>
+                    <p>Classic Neapolitan pizza with tomato, mozzarella, and basil.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Pizza dough</li>
+                            <li>Tomato sauce</li>
+                            <li>Mozzarella & Basil</li>
+                        </ul>
+                        <p><strong>Method:</strong> Spread sauce on dough, add toppings, bake at high heat 10-15 min.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://littlespoonfarm.com/wp-content/uploads/2024/07/Pasta-Carbonara-Recipe.jpg" alt="Pasta Carbonara">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Pasta Carbonara</h3>
+                    <p>Rich pasta with eggs, cheese, pancetta, and black pepper.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Spaghetti</li>
+                            <li>Eggs & Pecorino</li>
+                            <li>Pancetta & Pepper</li>
+                        </ul>
+                        <p><strong>Method:</strong> Cook pasta, combine with eggs, cheese, and cooked pancetta off heat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://www.kingarthurbaking.com/sites/default/files/2023-03/Tiramisu_1426.jpg" alt="Tiramisu">
+                    <div class="card-badge">Dessert</div>
+                </div>
+                <div class="card-body">
+                    <h3>Tiramisu</h3>
+                    <p>Coffee-flavored Italian dessert with mascarpone and cocoa.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Ladyfingers</li>
+                            <li>Mascarpone & Eggs</li>
+                            <li>Coffee & Cocoa</li>
+                        </ul>
+                        <p><strong>Method:</strong> Layer soaked ladyfingers with mascarpone mixture, chill 4h, dust cocoa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Colosseum, Rome</h3>
+                <p>The iconic symbol of Ancient Rome, famous for gladiator fights and historic architecture.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://media.cntraveler.com/photos/58da7b6e1021b64be09794da/16:9/w_4288,h_2412,c_limit/GettyImages-177303568.jpg" alt="Colosseum">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Venice Canals</h3>
+                <p>Romantic waterways with gondolas, bridges, and historic architecture across Venice.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://cdn.britannica.com/63/153463-050-06B6270D/Grand-Canal-Venice.jpg" alt="Venice Canal">
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>Italian Phrases</h2>
+            <p>Learn basic Italian phrases. Tap the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Ciao</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="it_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="it_hello.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Grazie</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="it_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="it_thanks.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>No</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="it_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="it_no.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Sì</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="it_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="it_yes.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Per favore</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="it_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="it_please.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover Italy © 2026</p>
+</footer>
+
+<script src="italy.js"></script>
+</body>
+</html>

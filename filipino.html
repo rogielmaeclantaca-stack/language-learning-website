@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Philippines</title>
+    <link rel="stylesheet" href="filipino.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Mabuhay!</span>
+        <h1>Philippine<br>Heritage</h1>
+        <p>Explore the Philippines' culture, food, and natural wonders across its islands.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>The Pearl<br>of the Orient</h2>
+                <p>The Philippines is an archipelago of over 7,000 islands, rich in culture, history, and natural beauty. From bustling Manila to pristine Palawan beaches, adventure awaits.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">7k+</span>
+                        <span class="label">Islands</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">113M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://www.kkday.com/en-ph/blog/wp-content/uploads/Palawan-1170x680.jpg" alt="Palawan Beach">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">Filipino Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK6PLjBWZLxlVlLck1VtdbKTxDGnJH89WOEw&s" alt="Adobo">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Adobo</h3>
+                    <p>Classic Filipino stew made with meat, vinegar, soy sauce, and garlic.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Pork or Chicken</li>
+                            <li>Soy sauce & Vinegar</li>
+                            <li>Garlic & Bay leaves</li>
+                        </ul>
+                        <p><strong>Method:</strong> Marinate meat, sauté, simmer with sauce until tender.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://www.nestlegoodnes.com/ph/sites/default/files/styles/1_1_768px_width/public/srh_recipes/442ce059c4c490e1ab61cdaef9c98511.jpg.webp?itok=sKq8qila" alt="Sinigang">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Sinigang</h3>
+                    <p>Sour soup with pork, shrimp, or fish, and local vegetables.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Pork, Shrimp or Fish</li>
+                            <li>Tamarind base</li>
+                            <li>Vegetables</li>
+                        </ul>
+                        <p><strong>Method:</strong> Boil meat/fish, add vegetables and sour base, simmer until cooked.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://www.thefooddictator.com/wp-content/uploads/2019/01/cebulechon-320x180.jpg" alt="Lechon">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Lechon</h3>
+                    <p>Crispy roasted pig, a festive Filipino favorite.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Whole pig</li>
+                            <li>Salt, spices</li>
+                            <li>Lemongrass & marinade</li>
+                        </ul>
+                        <p><strong>Method:</strong> Stuff pig, season, roast slowly until skin is crispy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Chocolate Hills, Bohol</h3>
+                <p>Geologic formations creating hundreds of perfectly cone-shaped hills, a unique natural wonder.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://www.tripsavvy.com/thmb/8gTOJeU2WfGEvmmbYce2jvM0CoU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-986752762-0b69190b203844b2bac7b82d8aebcb97.jpg" alt="Chocolate Hills">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Palawan Beaches</h3>
+                <p>White sand beaches with crystal-clear water, perfect for island hopping and diving.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Palawan">
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>Filipino Phrases</h2>
+            <p>Learn basic Filipino phrases. Tap the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg" alt="Philippine Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Kumusta</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="ph_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="ph_hello.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Salamat</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="ph_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="ph_thanks.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">    
+                        <span class="icon">🛑</span>
+                        <h3>Hindi</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="ph_3no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="ph_no.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Oo</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="ph_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="ph_yes.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Pakiusap</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="ph_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="ph_please.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover Philippines © 2026</p>
+</footer>
+
+<script src="filipino.js"></script>
+</body>
+</html>
