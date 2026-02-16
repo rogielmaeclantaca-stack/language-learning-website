@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Languages & Cultures</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="welcome-page">
+
+<div class="background-container">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="noise-overlay"></div>
+</div>
+
+<main class="content-wrapper">
+
+<section class="hero">
+    <h1 class="fade-in">World <span class="gradient-text">Explorer</span></h1>
+    <div class="hero-divider"></div>
+
+
+    <p class="instruction fade-in-delay">
+        Embark on a global journey. Select a destination to explore its unique culture, cuisine, and language.
+    </p>
+
+    <div class="scroll-indicator fade-in-delay">
+        <span class="arrow">⬇️</span>
+        <span class="scroll-text">Click to discover fun facts</span>
+        
+
+    
+    <div class="image-showcase fade-in-delay">
+        
+        <div class="image-card" data-country="Japan" data-flag="🇯🇵" data-desc="Land of the Rising Sun" data-fact="In Japan, there are more pets than children. The 'Kawaii' (cute) culture is so strong that even construction barriers are often shaped like Hello Kitty or animals!">
+            <img src="https://media.cntraveler.com/photos/68ff82e7977accaf27ac5b35/16:9/w_2560%2Cc_limit/GettyImages-2078516558.jpg" alt="Japan">
+        </div>
+
+        <div class="image-card" data-country="Spain" data-flag="🇪🇸" data-desc="Passion & History" data-fact="Spain hosts 'La Tomatina,' the world's largest food fight, where over 20,000 people throw 120 tons of tomatoes at each other every August!">
+            <img src="https://zen.wego.com/cdn-cgi/image/format=auto,quality=75,width=768/web/cms/destinations/country/es/herodir/en/01_346515823.jpg" alt="Spain">
+        </div>
+
+        <div class="image-card" data-country="France" data-flag="🇫🇷" data-desc="Art & Romance" data-fact="The French consume about 25,000 tons of snails (escargots) per year. Also, it is illegal in France to name a pig 'Napoleon'.">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="France">
+        </div>
+
+        <div class="image-card" data-country="Korea" data-flag="🇰🇷" data-desc="Tradition meets Tech" data-fact="Instead of saying 'Cheese' when taking a photo, Koreans often say 'Kimchi!' to make themselves smile.">
+            <img src="https://lp-cms-production.imgix.net/2025-04/shutterstock1874286289.jpg?auto=format,compress&q=72&w=1095&fit=crop&crop=faces,edges" alt="Korea">
+        </div>
+
+        <div class="image-card" data-country="Italy" data-flag="🇮🇹" data-desc="Taste of Heritage" data-fact="In the Abruzzo region of Italy, there is a wine fountain that flows 24-hours a day, and it is completely free to drink from!">
+            <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/03/13124410/Venice-1-1600x900.jpg" alt="Italy">
+        </div>
+
+        <div class="image-card" data-country="Philippines" data-flag="🇵🇭" data-desc="Pearl of the Orient" data-fact="The Philippines has the longest Christmas season in the world. Christmas carols start playing in September (the 'Ber' months) and celebrations last until January.">
+            <img src="https://i.natgeofe.com/n/54720271-2656-4eae-a088-a2023cc25c9f/historic-colonial-town-of-vigan.jpg" alt="Philippines">
+        </div>
+
+        <div class="image-card" data-country="USA" data-flag="🇺🇸" data-desc="Land of Opportunity" data-fact="The current 50-star American flag was designed by a high school student named Robert G. Heft for a class project. He originally got a B- for it!">
+            <img src="https://d1bv4heaa2n05k.cloudfront.net/user-images/1444124382002/shutterstock-59760706small_destinationMain_1444124438669.jpeg" alt="USA">
+        </div>
+
+        <div class="image-card" data-country="Australia" data-flag="🇦🇺" data-desc="The Land Down Under" data-fact="Australia is home to the 'Dingo Fence,' which is over 5,600 km long—making it longer than the Great Wall of China!">
+            <img src="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/dupkeyphu41gaskx13ff?_a=BACAGSGT" alt="Australia">
+        </div>
+        
+    </div>
+
+    
+
+    <div class="hero-button fade-in-delay">
+        <a href="languages.html" class="btn secondary">Explore All</a>
+    </div>
+</section>
+
+</main>
+
+<div class="modal-overlay" id="infoModal">
+    <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+            <span class="modal-flag" id="m-flag"></span>
+            <h2 id="m-country">Country Name</h2>
+        </div>
+        <p class="modal-desc" id="m-desc">Description goes here</p>
+        <div class="fun-fact-box">
+            <h3>Did you know?</h3>
+            <p id="m-fact">Fun fact goes here...</p>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Languages & Cultures</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="welcome-page">
+
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <main class="content-wrapper">
+         
+        <section class="hero">
+    <h1 class="fade-in">Languages <span class="gradient-text">of the World</span></h1>
+    <div class="hero-divider"></div>
+            <p class="section-subtitle">Select a destination to begin your journey.</p>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search country or language..." autocomplete="off">
+                <div class="search-icon">🔍</div>
+            </div>
+
+            <div class="country-grid" id="countryGrid">
+
+                <a href="japan.html" class="card portal-card" data-tilt data-name="Japan" data-lang="Japanese">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇯🇵</div>
+                            <span class="greeting">Konnichiwa</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Japan</span>
+                            <span class="sub-text">Japanese</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="spain.html" class="card portal-card" data-tilt data-name="Spain" data-lang="Spanish">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇪🇸</div>
+                            <span class="greeting">Hola</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Spain</span>
+                            <span class="sub-text">Spanish</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="france.html" class="card portal-card" data-tilt data-name="France" data-lang="French">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇫🇷</div>
+                            <span class="greeting">Bonjour</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">France</span>
+                            <span class="sub-text">French</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="korea.html" class="card portal-card" data-tilt data-name="Korea" data-lang="Korean">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇰🇷</div>
+                            <span class="greeting">Annyeong</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Korea</span>
+                            <span class="sub-text">Korean</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="italy.html" class="card portal-card" data-tilt data-name="Italy" data-lang="Italian">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇮🇹</div>
+                            <span class="greeting">Ciao</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Italy</span>
+                            <span class="sub-text">Italian</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="filipino.html" class="card portal-card" data-tilt data-name="Philippines" data-lang="Tagalog">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇵🇭</div>
+                            <span class="greeting">Mabuhay</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Philippines</span>
+                            <span class="sub-text">Tagalog</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="english.html" class="card portal-card" data-tilt data-name="USA America" data-lang="English">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇺🇸</div>
+                            <span class="greeting">Hello</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">USA</span>
+                            <span class="sub-text">English</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="australia.html" class="card portal-card" data-tilt data-name="Australia" data-lang="English">
+                    <div class="card-bg" style="background-image: url('https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/dupkeyphu41gaskx13ff?_a=BACAGSGT');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="flag-badge">🇦🇺</div>
+                            <span class="greeting">G'day</span>
+                        </div>
+                        <div class="card-text">
+                            <span class="name">Australia</span>
+                            <span class="sub-text">English</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        
+        <section class="hero" style="padding-top: 0;">
+            <div class="hero-divider"></div>
+            <div class="hero-button">
+                <a href="index.html" class="btn secondary">Back Home</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

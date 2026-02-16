@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Japan</title>
+    <link rel="stylesheet" href="japan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Welcome to the Land of the Rising Sun</span>
+        <h1>Japanese<br>Heritage</h1>
+        <p>Experience the culture, cuisine, and traditions of Japan.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>Land of<br>Tradition & Innovation</h2>
+                <p>Japan is a country where ancient temples coexist with neon-lit skyscrapers. From the serene gardens of Kyoto to the bustling streets of Tokyo, Japan offers a unique blend of history, technology, and natural beauty.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">2.7k+</span>
+                        <span class="label">Years of History</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">125M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://japanesetaste.com/cdn/shop/articles/Beautiful_Temples_cover_0ec2721f-1ff3-4e9d-9cea-73e46b5fa8d4.jpg?v=1753747927&width=600" alt="Japanese Temple">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">Japanese Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.kikkoman.eu/fileadmin/user_upload/kikkoman.eu/Food-News/EU_make-your-own-sushi/sushi-kakkoii.jpeg" alt="Sushi">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Sushi</h3>
+                    <p>Delicate vinegared rice with fresh fish, seaweed, and vegetables.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Sushi rice</li>
+                            <li>Fresh fish</li>
+                            <li>Nori seaweed</li>
+                        </ul>
+                        <p><strong>Method:</strong> Cook rice, season with vinegar. Assemble with fish and seaweed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/190208-delish-ramen-horizontal-093-1550096715.jpg?crop=0.8893333333333334xw:1xh;center,top&resize=1200:*" alt="Ramen">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Ramen</h3>
+                    <p>Noodle soup with rich broth, meat, and vegetables. A classic comfort food.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Noodles</li>
+                            <li>Pork or chicken</li>
+                            <li>Broth & toppings</li>
+                        </ul>
+                        <p><strong>Method:</strong> Boil noodles, prepare broth, combine with toppings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://lh5.googleusercontent.com/proxy/gHQg4Bpzu11TDv4mFX4T5iedHG_NzaR58KSR5Zm9PcDbFldtTl4W1mtuZQw7-2n21ty8zrZY6vraZgqcx2eKjEqhiUsQVGBfeGUrEDiWxRJ-qIk_Ej7iEUEcpHMBTMW-Q_PNSngSQh81MQjtNaRdp-T7QYHlBHqGpH5ErCcmUZYh9gBhKS7pmDzawIsB9ZBnNtBEfdJgnYA2il3YdGGExYE" alt="Mochi">
+                    <div class="card-badge">Dessert</div>
+                </div>
+                <div class="card-body">
+                    <h3>Mochi</h3>
+                    <p>Soft glutinous rice cake, often filled with sweet red bean paste.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Glutinous rice flour</li>
+                            <li>Red bean paste</li>
+                            <li>Sugar</li>
+                        </ul>
+                        <p><strong>Method:</strong> Steam rice flour dough, wrap sweet filling, serve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Mount Fuji</h3>
+                <p>Japan’s tallest peak, a sacred symbol surrounded by lakes and picturesque landscapes. A must-see natural icon.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Mount Fuji">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Kyoto Temples</h3>
+                <p>Home to historic shrines and serene gardens, Kyoto offers a glimpse into Japan’s rich cultural heritage.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://peterlamphotography.com/wp-content/uploads/2014/10/wordpress-1002313.jpg" alt="Kyoto Temple">
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>Japanese Phrases</h2>
+            <p>Learn basic Japanese phrases. Click the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" alt="Japanese Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Konnichiwa</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="jp_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="hello_japan.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Arigato</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="thanks_japan.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="thankyou_japan.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>Iie</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="jp_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="no_japan.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Hai</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="jp_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="yes_japan.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Onegai
+                                shimasu</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="jp_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="please_japan.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover Japan © 2026</p>
+</footer>
+
+<script src="japan.js"></script>
+</body>
+</html>
